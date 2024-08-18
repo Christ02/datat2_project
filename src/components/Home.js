@@ -1,14 +1,11 @@
 // src/components/Home.js
 import React from 'react';
-import { useAuth } from '../context/AuthContext';
 
 const Home = () => {
-  const { user, logout } = useAuth();
-
   return (
     <div>
-      <h2>Welcome, {user.username}!</h2>
-      <button onClick={logout}>Logout</button>
+      <h1>Welcome to My Project</h1>
+      <p>This is a general template for your project. Feel free to customize it!</p>
     </div>
   );
 };
