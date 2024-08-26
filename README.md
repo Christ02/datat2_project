@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Plataforma de Seguimiento de Salud y Bienestar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Este proyecto consiste en una plataforma web diseñada para permitir a los usuarios registrar y monitorear diversas métricas de salud y bienestar, como la actividad física, la dieta, el sueño, y otros indicadores clave. Los administradores tienen acceso a un panel de control donde pueden visualizar tendencias generales, detectar patrones de riesgo, y ofrecer recomendaciones personalizadas a los usuarios.
 
-In the project directory, you can run:
+## Funcionalidades Principales
 
-### `npm start`
+### Para Usuarios:
+- **Registro de Datos de Salud:** Los usuarios pueden ingresar datos diarios sobre su actividad física, dieta, horas de sueño, peso, frecuencia cardíaca, etc.
+- **Visualización de Progreso:** Los usuarios pueden ver gráficos y tablas que muestran su progreso en las métricas seleccionadas durante diferentes períodos (diario, semanal, mensual).
+- **Recomendaciones Personalizadas:** La plataforma sugiere automáticamente ajustes en la dieta o recomendaciones de ejercicio basadas en los datos ingresados.
+- **Notificaciones y Recordatorios:** Recordatorios para ingresar datos diarios y notificaciones en caso de no haber registrado información durante un período de tiempo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
 
-### `npm test`
+- **Tecnologías:** Node.js, Express.js, MongoDB.
+- **Estructura de Carpetas:**
+/backend ├── /config ├── /controllers ├── /models ├── /routes ├── /middleware └── server.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Endpoints Principales:**
+- `/api/users/register`: Registro de usuarios.
+- `/api/users/login`: Inicio de sesión de usuarios.
+- `/api/health-data`: Manejo de datos de salud (registro y consulta).
+- `/api/metrics/real-time`: Métricas de uso en tiempo real.
+- `/api/metrics/historical`: Generación de informes históricos.
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Tecnologías:** React, Axios, React Router, Chart.js.
+- **Estructura de Carpetas:**
+/frontend ├── /public ├── /src │ ├── /components │ ├── /context │ ├── /services │ └── App.js └── package.json
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Componentes Principales:**
+- `Dashboard`: Muestra gráficos de progreso y recomendaciones.
+- `HealthDataEntry`: Formulario para ingresar datos de salud.
+- `AdminPanel`: Panel de administración para visualizar métricas.
+- `Login`: Componente para el inicio de sesión.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalación y Configuración
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Requisitos Previos
+- Node.js (v14 o superior)
+- MongoDB (local o MongoDB Atlas)

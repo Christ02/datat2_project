@@ -25,3 +25,5 @@ yarn-error.log*
 # Cache files
 .cache/
 
+# Ignore the .env file
+.env
